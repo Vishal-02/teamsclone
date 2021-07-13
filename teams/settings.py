@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-asr-$m4z5mrgd$q86r4ysrnszexvumq=%fg)-tnpi1)qlp$m#t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', 'teamsclone.herokuapp.com']
 
 
 # Application definition

@@ -1,0 +1,34 @@
+<!-- we need to add a new field so what we're going to do is create a forms.py and 
+create our own form, and over there we're going to extend the UserCreationForm.
+Then we're also going to add the email field that we wanted. -->
+
+{% extends 'base.html' %} {% block body %}
+<!-- style="padding-top: 15px;" -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-header bg-light">
+                    <div class="card-title" style="text-align: center;">
+                        Register
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token %} {% for field in form %}
+                        <div class="form-group text-center">
+                            {{ field.name }}
+                            <br> {{ field }}
+                        </div> <br> {% endfor %}
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn-dark btn-info">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

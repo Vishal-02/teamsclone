@@ -1,0 +1,1 @@
+web gunicorn teams.wsgi:application --log-file -
